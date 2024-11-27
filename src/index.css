@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-    @apply 
-} */
+@layer components {
+  .field {
+    @apply flex lg:w-96 w-auto py-2 rounded-md items-center px-2 border border-gray-400;
+  }
+  .fieldpassword {
+    @apply flex justify-between lg:w-96 w-auto p-2 rounded-md items-center px-2 border border-gray-400;
+  }
+  .inputfield {
+    @apply w-full outline-none appearance-none;
+  }
+}
