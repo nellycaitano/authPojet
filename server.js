@@ -4,7 +4,7 @@ const connectDatabase = require('./config/db')
 const cookieParser =require('cookie-parser')
 const cors = require('cors')
 const helmet = require('helmet')
-connectDatabase()
+//connectDatabase()
 const app = express()
 const PORT  = process.env.PORT||5000
 
