@@ -3,3 +3,17 @@ http://localhost:4000/
 http://localhost:4000/api/auth/register
 http://localhost:4000/api/auth/login
 http://localhost:4000/api/auth/logout
+
+//Structure de la data pour l'inscription
+{
+        "username": "John Doe",
+        "email": "johnrdgortr@example.com",
+        "password": "password123",
+}
+
+//pour le login
+{
+        
+        "email": "johnrdgortr@example.com",
+        "password": "password123",
+}
