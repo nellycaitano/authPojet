@@ -17,6 +17,7 @@ const propertySchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+
   availability: {
     type: [
       {

@@ -6,18 +6,19 @@ const {
   getListingReservations,
   cancelReservation,
 } = require("../controllers/reservationController");
-const { isAuthenticated, isOwner } = require('../middlewares/middleware')
-/*
+const { isAuthenticated, isOwner } = require('../middlewares/middleware');
+const { authenticateToken } = require("../controllers/authcontroller");
+
 // POST: Réserver une annonce
-router.post("/", isAuthenticated, createReservation);
+router.post("/create", authenticateToken, createReservation);
 
 // GET: Les réservations d'un utilisateur
-router.get("/user", isAuthenticated, getUserReservations);
-
+router.get("/user", authenticateToken, getUserReservations);
+/*
 // GET: Les réservations pour une annonce (réservé au propriétaire)
-router.get("/listing/:listingId", isAuthenticated, isOwner, getListingReservations);
+router.get("/listing/:listingId", authenticateToken, isOwner, getListingReservations);
 
 // DELETE: Annuler une réservation
-router.delete("/:id", isAuthenticated, cancelReservation);
-*/
+router.delete("/:id", authenticateToken, cancelReservation);*/
+
 module.exports = router;

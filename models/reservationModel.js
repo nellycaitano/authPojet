@@ -4,12 +4,12 @@ const ReservationSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true
+    required: false
   },
   property: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Property',
-    required: true
+    required: false
   },
   startDate: {
     type: Date,
@@ -21,12 +21,13 @@ const ReservationSchema = new mongoose.Schema({
   },
   totalPrice: {
     type: Number,
-    required: true
+    required: false
   },
   status: {
     type: String,
     enum: ['pending', 'confirmed', 'cancelled'],
-    default: 'pending'
+    default: 'pending',
+    required:false
   }
 }, { timestamps: true });
 

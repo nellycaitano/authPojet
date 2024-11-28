@@ -7,7 +7,7 @@ const createReservation = async (req, res) => {
 
     const newReservation = await Reservation.create({
       listing: listingId,
-      user: req.user.id,
+      user: req.user.userId,
       startDate,
       endDate,
     });
@@ -21,7 +21,7 @@ const createReservation = async (req, res) => {
 // Obtenir les réservations d'un utilisateur
 const getUserReservations = async (req, res) => {
   try {
-    const reservations = await Reservation.find({ user: req.user.id }).populate("listing");
+    const reservations = await Reservation.find({ user: req.user.userId }).populate("listing");
 
     res.status(200).json(reservations);
   } catch (err) {
